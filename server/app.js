@@ -1,17 +1,19 @@
+const dotenv = require("dotenv");
 const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
 
-const DB = 'mongodb+srv://neha:neha@2001@cluster0.i8fqb.mongodb.net/mernstack?retryWrites=true&w=majority'
+dotenv.config({ path: "./config.env" });
+//hv to write only in app.js
 
 
-mongoose.connect(DB, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+require('./db/conn');
+// const User = require('./model/userSchema');
 
-}).then(() => {
-    console.log("connected succesfully");
-}).catch((err) => console.log(err));
+//router file linked
+app.use(require('./router/auth'));
+
+const PORT = process.env.PORT;
 
 
 //MiddleWare
@@ -22,9 +24,10 @@ const middleware = (req, res, next) => {
 
 middleware();
 
-app.get('/', (req, res) => {
-    res.send("hello world");
-})
+// app.get('/', (req, res) => {
+//     res.send("hello world");
+// })
+
 app.get('/about', middleware, (req, res) => {
     res.send("hello from about");
 })
@@ -38,6 +41,6 @@ app.get('/signup', (req, res) => {
     res.send("hello from registeration");
 })
 
-app.listen(3000, () => {
-    console.log('server is running at port 3000');
+app.listen(PORT, () => {
+    console.log(`server is running at port ${PORT}`);
 })
