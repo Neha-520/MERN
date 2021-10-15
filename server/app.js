@@ -10,6 +10,8 @@ dotenv.config({ path: "./config.env" });
 require('./db/conn');
 // const User = require('./model/userSchema');
 
+app.use(express.json());
+
 //router file linked
 app.use(require('./router/auth'));
 
