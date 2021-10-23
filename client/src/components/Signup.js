@@ -6,7 +6,7 @@ export const Signup = () => {
         <>
             <section className="signup">
                 <div className="container mt-5">
-                    <div className="signup-content" style={{ display: "flex", flexDirection: "column" }}>
+                    <div className="signup-content p-lg-5" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                         <div className="signup-form">
                             <h2 className="form-title">Sign up</h2>
                             <form className="register-form" id="reguster-form">

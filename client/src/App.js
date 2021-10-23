@@ -6,27 +6,33 @@ import { Login } from './components/Login';
 import { Signup } from './components/Signup';
 
 import { Navbar } from './components/Navbar';
-import { Route } from 'react-router-dom'
+import { Route, Switch } from 'react-router-dom'
+import { ErrorPage } from './components/ErrorPage';
 
 function App() {
   return (
     <div className="App">
       <Navbar />
-      <Route exact path="/">
-        <Home />
-      </Route>
-      <Route path="/about">
-        <About />
-      </Route>
-      <Route path="/contact">
-        <Contact />
-      </Route>
-      <Route path="/login">
-        <Login />
-      </Route>
-      <Route path="/signup">
-        <Signup />
-      </Route>
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/contact">
+          <Contact />
+        </Route>
+        <Route path="/login">
+          <Login />
+        </Route>
+        <Route path="/signup">
+          <Signup />
+        </Route>
+        <Route >
+          <ErrorPage />
+        </Route>
+      </Switch>
     </div>
   );
 }
