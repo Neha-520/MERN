@@ -41,11 +41,11 @@ export const About = () => {
                         <div className="col-md-4">
                             <div className="profile-work">
                                 <p>WORK LINK</p>
-                                <a href="" target="_blank">Linked In</a><br />
-                                <a href="" target="_blank">Instagram</a><br />
-                                <a href="" target="_blank"> Facebook</a><br />
-                                <a href="" target="_blank"> Twitter</a><br />
-                                <a href="" target="_blank"> Web Developer</a><br />
+                                <a href="/" target="_blank">Linked In</a><br />
+                                <a href="/" target="_blank">Instagram</a><br />
+                                <a href="/" target="_blank"> Facebook</a><br />
+                                <a href="/" target="_blank"> Twitter</a><br />
+                                <a href="/" target="_blank"> Web Developer</a><br />
 
                             </div>
                         </div>
