@@ -10,7 +10,7 @@ export const Login = () => {
                         <div className="signin-content  p-lg-5" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
                             <div className="signin-image">
                                 <figure>
-                                    <img src="/login1.jpg" style={{ width: "280px", height: "300px", objectFit: "contain" }} alt="Login pic"></img>
+                                    <img src="/login2.jpg" style={{ width: "280px", height: "300px", objectFit: "contain" }} alt="Login pic"></img>
                                 </figure>
                                 <NavLink to="/signup" className="signup-image-link">Create account</NavLink>
                             </div>

@@ -53,7 +53,7 @@ export const Signup = () => {
                             </div>
                             <div className="signup-image">
                                 <figure>
-                                    <img alt="registration pic"></img>
+                                    <img src="/register.jpg" alt="registration pic" style={{ width: "280px", height: "300px", objectFit: "contain" }}></img>
                                 </figure>
                                 <NavLink to="/login" className="signup-image-link">I am already registered</NavLink>
                             </div>
