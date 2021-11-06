@@ -9,9 +9,9 @@ export const Contact = () => {
                         <div className="col-lg-10 offset-lg-1 d-flex justify-content-between">
                             <div className="contact_info_item d-flex  align-items-center">
                                 <img src="https://img.icons8.com/office/24/000000/iphone.png" alt="phone"></img>
-                                <div className="contact_info_content">
+                                <div className="contact_info_content " style={{ marginLeft: "1rem" }}>
                                     <div className="contact_info_title">
-                                        Phone
+                                        <b> Phone</b>
                                     </div>
                                     <div className="contact_info_text">
                                         +91 9878993462
@@ -20,10 +20,10 @@ export const Contact = () => {
                             </div>
 
                             <div className="contact_info_item d-flex  align-items-center">
-                                <img src="https://img.icons8.com/office/24/000000/iphone.png" alt="phone"></img>
-                                <div className="contact_info_content">
+                                <img src="https://img.icons8.com/office/24/000000/email.png" alt="phone"></img>
+                                <div className="contact_info_content" style={{ marginLeft: "1rem" }}>
                                     <div className="contact_info_title">
-                                        Email
+                                        <b> Email</b>
                                     </div>
                                     <div className="contact_info_text">
                                         neha17@gmail.com
@@ -32,10 +32,10 @@ export const Contact = () => {
                             </div>
 
                             <div className="contact_info_item d-flex  align-items-center">
-                                <img src="https://img.icons8.com/office/24/000000/iphone.png" alt="phone"></img>
-                                <div className="contact_info_content">
+                                <img src="https://img.icons8.com/office/24/000000/address.png" alt="phone"></img>
+                                <div className="contact_info_content" style={{ marginLeft: "1rem" }}>
                                     <div className="contact_info_title">
-                                        Address
+                                        <b> Address</b>
                                     </div>
                                     <div className="contact_info_text">
                                         Sunam,India
@@ -48,14 +48,14 @@ export const Contact = () => {
             </div>
 
 
-            <div className="contact_form">
+            <div className="contact_form" >
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-10 offset-lg-1">
                             <div className="contact_form_container py-5">
                                 <div className="contact_form_title">
                                     <h3>Get In Touch</h3></div>
-                                <form id="contact_form">
+                                <form id="contact_form" className="mt-4">
                                     <div className="contact_form_name d-flex justify-content-between align-items-between">
                                         <input type="text" id="contact_form_name" className="contact_form_name input_field" placeholder="Your Name" required="true">
                                         </input>
@@ -68,9 +68,9 @@ export const Contact = () => {
                                     </div>
 
                                     <div className="contact_form_text mt-5">
-                                        <textarea className="text_field contact_form_message" placeholder="Message" cols="30" rows="10"></textarea>
+                                        <textarea className="text_field contact_form_message p-3" placeholder="Message" cols="100" rows="5"></textarea>
                                     </div>
-                                    <div className="contact_form_button">
+                                    <div className="contact_form_button mt-4">
                                         <button type="submit" className="btn btn-primary ">
                                             Send Message
                                         </button>

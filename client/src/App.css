@@ -45,6 +45,18 @@
     height: 100%;
     background-color: rgb(238, 242, 255); 
 }
+.form-submit {
+     font-family:"Maven Pro",sans-serif ;
+     font-size: 14px;
+     text-decoration: none;
+     background: #189cf0;
+     display: inline-block;
+    
+     border: 2px solid transparent;
+     border-radius: 40px;
+     color: #fff;
+     font-weight: 400;
+} 
 .wh{
     position: relative;
     /* top:0; */
@@ -72,7 +84,9 @@ box-shadow: 5px 5px 15px -5px rgb(164, 165, 167);
 overflow-y: auto;
 }
 .sign-in{
-  background-color: white;
+  background-color: #fff;
+box-shadow: 5px 5px 15px -5px rgb(164, 165, 167);
+overflow-y: auto;
 }
 input{
   border: none;
@@ -83,16 +97,51 @@ input{
   border-bottom: 2px solid black;
   outline: none;
 }
+.contact_form_container {
+margin-top: 50px;
+/* height: 60vh; */
+background-color: #fff;
+box-shadow: 1px 5px 15px -5px rgb(164, 165, 167);
+/* overflow: hidden; */
+padding: 1rem 5rem 1rem 5rem;
+   width: fit-content;
+     height: fit-content;
+}
+
 .form-title{
   font-weight: 700;
   font-size: 30px;
 }
+.input_field {
+  padding: 1.3rem;
+  margin-right: 1rem;
+  border: none;
+    border: 0.1rem solid rgb(231, 234, 238);
+
+}
+.input_field::-webkit-input-placeholder {
+color: rgb(199, 196, 196);
+}
+textarea{
+  border: none;
+     border: 0.1rem solid rgb(231, 234, 238);
+}
+textarea::-webkit-input-placeholder {
+color: rgb(199, 196, 196) !important;
+}
 .contact_info_item{
-  border: 1px rgb(189, 183, 183) solid ;
+ 
+  border: 0.1rem solid rgb(231, 234, 238);
   width: 400px;
   padding: 1rem;
 }
+.contact_info_text{
+  color: rgb(141, 141, 141);
+}
+/* #contact_form{
+  width: fit-content;
 
+} */
 /* 404 error page */
 #notfound{
   position: relative;
@@ -138,6 +187,8 @@ z-index: -1;
   -ms-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
 }
+
+
 .notfound h2{
   font-family:"Maven Pro",sans-serif ;
   font-size: 46px;
