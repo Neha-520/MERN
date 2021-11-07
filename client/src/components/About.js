@@ -3,6 +3,7 @@ import React from 'react'
 export const About = () => {
     return (
         <>
+
             <div className="container emp-profile p-5" style={{ marginTop: "40px", boxShadow: "0 6px 10px -4px rgb(0 0 0 / 0.2)" }}>
                 <form method="">
                     <div className="row">
@@ -42,12 +43,12 @@ export const About = () => {
                         <div className="col-md-4">
                             <div className="profile-work" style={{ marginTop: "20px" }}>
                                 <p style={{ color: "gray" }}>WORK LINK</p>
-                                <a href="https://www.linkedin.com/in/neha-garg-506700200/" target="_blank">Linked In</a><br />
-                                <a href="https://www.instagram.com/neha._.garg._/" target="_blank">Instagram</a><br />
-                                <a href="https://mtouch.facebook.com/profile.php" target="_blank"> Facebook</a><br />
-                                <a href="https://twitter.com/home" target="_blank"> Twitter</a><br />
-                                <a href="https://github.com/Neha-520" target="_blank"> Web Developer</a><br />
-                                <a href="https://github.com/Neha-520" target="_blank">Github</a><br />
+                                <a href="https://www.linkedin.com/in/neha-garg-506700200/" rel="noreferrer" target="_blank">Linked In</a><br />
+                                <a href="https://www.instagram.com/neha._.garg._/" rel="noreferrer" target="_blank">Instagram</a><br />
+                                <a href="https://mtouch.facebook.com/profile.php" rel="noreferrer" target="_blank"> Facebook</a><br />
+                                <a href="https://twitter.com/home" rel="noreferrer" target="_blank"> Twitter</a><br />
+                                <a href="https://github.com/Neha-520" rel="noreferrer" target="_blank"> Web Developer</a><br />
+                                <a href="https://github.com/Neha-520" rel="noreferrer" target="_blank">Github</a><br />
                             </div>
                         </div>
                         <div className="col-md-8 pl-5 about-info">
@@ -143,6 +144,7 @@ export const About = () => {
                     </div>
                 </form>
             </div>
+
         </>
     )
 }
