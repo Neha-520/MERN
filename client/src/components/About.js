@@ -3,19 +3,20 @@ import React from 'react'
 export const About = () => {
     return (
         <>
-            <div className="container emp-profile">
+            <div className="container emp-profile p-5" style={{ marginTop: "40px", boxShadow: "0 6px 10px -4px rgb(0 0 0 / 0.2)" }}>
                 <form method="">
                     <div className="row">
                         <div className="col-md-4">
                             <div children="profile-img">
-                                <img src="" alt="neha" />
+                                {/* src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWMQkj6_gQi5y_VcfXdbuGyhd4XmlVHuAjgw&usqp=CAU" */}
+                                <img src="https://i.pinimg.com/736x/89/90/48/899048ab0cc455154006fdb9676964b3.jpg" style={{ width: "190px", height: "200px", objectFit: "contain" }} alt="neha" />
                             </div>
                         </div>
                         <div className="col-md-6">
                             <div className="profile-head">
                                 <h5>Neha Garg</h5>
-                                <h6>Web Developer</h6>
-                                <p className="profile-rating mt-3 mb-5">
+                                <h6 style={{ color: "blue" }}>Web Developer</h6>
+                                <p className="profile-rating mt-3 mb-5 " style={{ color: "gray" }}>
                                     RANKINGS : <span>1/10</span>
                                 </p>
 
@@ -39,14 +40,14 @@ export const About = () => {
 
                     <div className="row">
                         <div className="col-md-4">
-                            <div className="profile-work">
-                                <p>WORK LINK</p>
-                                <a href="/" target="_blank">Linked In</a><br />
-                                <a href="/" target="_blank">Instagram</a><br />
-                                <a href="/" target="_blank"> Facebook</a><br />
-                                <a href="/" target="_blank"> Twitter</a><br />
-                                <a href="/" target="_blank"> Web Developer</a><br />
-
+                            <div className="profile-work" style={{ marginTop: "20px" }}>
+                                <p style={{ color: "gray" }}>WORK LINK</p>
+                                <a href="https://www.linkedin.com/in/neha-garg-506700200/" target="_blank">Linked In</a><br />
+                                <a href="https://www.instagram.com/neha._.garg._/" target="_blank">Instagram</a><br />
+                                <a href="https://mtouch.facebook.com/profile.php" target="_blank"> Facebook</a><br />
+                                <a href="https://twitter.com/home" target="_blank"> Twitter</a><br />
+                                <a href="https://github.com/Neha-520" target="_blank"> Web Developer</a><br />
+                                <a href="https://github.com/Neha-520" target="_blank">Github</a><br />
                             </div>
                         </div>
                         <div className="col-md-8 pl-5 about-info">

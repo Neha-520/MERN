@@ -23,7 +23,13 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
+a{
+  color: rgb(63, 62, 62);
+  font-weight: 700;
+}
+.tab-pane p{
+  color: blue
+}
 .App-link {
   color: #61dafb;
 }
@@ -57,6 +63,18 @@
      color: #fff;
      font-weight: 400;
 } 
+.profile-edit-btn {
+     font-family:"Maven Pro",sans-serif ;
+     font-size: 14px;
+     text-decoration: none;
+     background: rgb(226, 224, 224);
+     /* display: inline-block; */
+    opacity: 0.7;
+     border: 2px solid transparent;
+     border-radius: 50px;
+     color: rgb(114, 113, 113);
+     font-weight: 700;
+}
 .wh{
     position: relative;
     /* top:0; */
@@ -80,12 +98,14 @@
   min-width: 40%;
 height: 85vh;
 background-color: #fff;
-box-shadow: 5px 5px 15px -5px rgb(164, 165, 167);
+ box-Shadow: 0 6px 10px -4px rgb(0 0 0 / 0.2);
 overflow-y: auto;
 }
 .sign-in{
   background-color: #fff;
-box-shadow: 5px 5px 15px -5px rgb(164, 165, 167);
+/* box-shadow: 5px 5px 15px -5px rgb(164, 165, 167); */
+ /* box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); */
+ box-Shadow: 0 6px 10px -4px rgb(0 0 0 / 0.2);
 overflow-y: auto;
 }
 input{
@@ -101,7 +121,7 @@ input{
 margin-top: 50px;
 /* height: 60vh; */
 background-color: #fff;
-box-shadow: 1px 5px 15px -5px rgb(164, 165, 167);
+ box-Shadow: 0 6px 10px -4px rgb(0 0 0 / 0.2);
 /* overflow: hidden; */
 padding: 1rem 5rem 1rem 5rem;
    width: fit-content;
