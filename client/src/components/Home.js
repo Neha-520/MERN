@@ -9,7 +9,7 @@ export const Home = () => {
                 <p className="pt-5 " style={{ color: 'blue', zIndex: "1" }}>WELCOME</p>
                 <h1 style={{ zIndex: "1", textAlign: "center" }}>We Are The MERN Developer</h1>
             </div>
-            <div className="wh">
+            <div className="wh" >
             </div>
         </>
     )

@@ -89,9 +89,9 @@ a{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
+   align-items: center;
 
-  text-align: center; 
+  /* text-align: center;   */
 }
 .signup{
   width:35%;
@@ -113,7 +113,7 @@ input{
   background: transparent;
   height: 30px;
   top:10px;
-  width: 85%;
+  width: 90%;
   border-bottom: 2px solid black;
   outline: none;
 }
@@ -150,7 +150,7 @@ textarea::-webkit-input-placeholder {
 color: rgb(199, 196, 196) !important;
 }
 .contact_info_item{
- 
+ background-color: #ffffff;
   border: 0.1rem solid rgb(231, 234, 238);
   width: 400px;
   padding: 1rem;

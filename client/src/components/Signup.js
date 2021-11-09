@@ -5,12 +5,12 @@ export const Signup = () => {
     return (
         <>
             <div className="x">
-                <section className="signup">
-                    <div className="container mt-5">
-                        <div className="signup-content p-lg-5" style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-                            <div className="signup-form">
-                                <h2 className="form-title">Sign up</h2>
-                                <form className="register-form" id="reguster-form">
+                <section className="signup" style={{ width: "50%" }}>
+                    <div className="container mt-5" >
+                        <div className="signup-content p-lg-5" style={{ display: "flex" }}>
+                            <div className="signup-form col-6">
+                                <h2 className="form-title mb-2">Sign up</h2>
+                                <form className="register-form p-4" id="reguster-form">
                                     <div className="form-group">
                                         <label htmlFor="name">
                                             <i class="zmdi zmdi-account material-icons-name"></i>                                    </label>
@@ -46,13 +46,13 @@ export const Signup = () => {
                                         </label>
                                         <input type="password" name="cpassword" id="cpassword" autoComplete="off" placeholder="Confirm Your Password"></input>
                                     </div>
-                                    <div className="form-group form-button">
+                                    <div className="form-group form-button mt-5" >
                                         <input type="submit" name="signup" id="signup" className="form-submit" value="Register"></input>
                                     </div>
                                 </form>
                             </div>
-                            <div className="signup-image">
-                                <figure>
+                            <div className="signup-image mt-2  col-6"  >
+                                <figure >
                                     <img src="/register.jpg" alt="registration pic" style={{ width: "280px", height: "300px", objectFit: "contain" }}></img>
                                 </figure>
                                 <NavLink to="/login" className="signup-image-link">I am already registered</NavLink>
