@@ -6,10 +6,10 @@ export const Signup = () => {
         <>
             <div className="x">
                 <section className="signup" style={{ width: "50%" }}>
-                    <div className="container mt-5" >
+                    <div className="container mt-4" >
                         <div className="signup-content p-lg-5" style={{ display: "flex" }}>
                             <div className="signup-form col-6">
-                                <h2 className="form-title mb-2">Sign up</h2>
+                                <center><h2 className="form-title mb-2">Sign up</h2></center>
                                 <form className="register-form p-4" id="reguster-form">
                                     <div className="form-group">
                                         <label htmlFor="name">

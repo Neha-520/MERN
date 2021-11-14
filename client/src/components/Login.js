@@ -6,15 +6,15 @@ export const Login = () => {
         <>
             <div className="x">
                 <section className="sign-in">
-                    <div className="container mt-5">
-                        <div className="signin-content  p-4" style={{ display: "flex" }}>
-                            <div className="signin-image col-6">
+                    <div className="container mt-4">
+                        <div className="signin-content  p-5" style={{ display: "flex" }}>
+                            <div className="signin-image col-7">
                                 <figure>
-                                    <img src="/login2.jpg" style={{ width: "400px", height: "300px", objectFit: "fill" }} alt="Login pic"></img>
+                                    <img src="/login2.jpg" style={{ width: "400px", height: "300px", objectFit: "fit-content" }} alt="Login pic"></img>
                                 </figure>
                                 <center><NavLink to="/signup" className="signup-image-link ">Create account</NavLink></center>
                             </div>
-                            <div className="signin-form col-6 ml-3">
+                            <div className="signin-form col-5 " >
                                 <h2 className="form-title mt-1">Sign In</h2>
                                 <form className="register-form mt-2" id="reguster-form">
 

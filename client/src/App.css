@@ -95,18 +95,20 @@ a{
 }
 .signup{
   width:35%;
-  min-width: 40%;
-height: 85vh;
+  min-width: fit-content;
+height: 80vh;
 background-color: #fff;
  box-Shadow: 0 6px 10px -4px rgb(0 0 0 / 0.2);
-overflow-y: auto;
+/* overflow-y: auto; */
+/* overflow-x: scroll; */
 }
 .sign-in{
   background-color: #fff;
 /* box-shadow: 5px 5px 15px -5px rgb(164, 165, 167); */
  /* box-shadow: 0 3px 10px rgb(0 0 0 / 0.2); */
  box-Shadow: 0 6px 10px -4px rgb(0 0 0 / 0.2);
-overflow-y: auto;
+   min-width: fit-content;
+/* overflow-y: auto; */
 }
 input{
   border: none;
