@@ -50,14 +50,14 @@ export const Login = () => {
                                         <label htmlFor="email">
                                             <i className="zmdi zmdi-email material-icons-name"></i>
                                         </label>
-                                        <input type="email" name="email" id="email" autoComplete="off" onChange={() => setEmail(e.target.value)} placeholder="Your Email"></input>
+                                        <input type="email" name="email" id="email" autoComplete="off" onChange={(e) => setEmail(e.target.value)} placeholder="Your Email"></input>
                                     </div>
 
                                     <div className="form-group">
                                         <label htmlFor="password">
                                             <i className="zmdi zmdi-lock material-icons-name"></i>
                                         </label>
-                                        <input type="password" name="password" id="password" autoComplete="off" onChange={() => setPassword(e.target.value)} placeholder="Your Password"></input>
+                                        <input type="password" name="password" id="password" autoComplete="off" onChange={(e) => setPassword(e.target.value)} placeholder="Your Password"></input>
                                     </div>
 
                                     <div className="form-group form-button mt-4">
