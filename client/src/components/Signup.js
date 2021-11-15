@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useHistory } from 'react-router-dom'
 
 export const Signup = () => {
 
+    const history = useHistory();
     const [user, setUser] = useState({
         name: "",
         email: "",
@@ -16,6 +17,33 @@ export const Signup = () => {
         setUser({ ...user, [e.target.name]: e.target.value })
     }
 
+    const postData = async (e) => {
+        e.preventDefault();
+
+        const { name, email, phone, work, password, cpassword } = user;
+
+        const res = await fetch("/register", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                name, email, phone, work, password, cpassword
+            })
+        });
+
+        const data = await res.json();
+        if (data.status === 422 || !data) {
+            window.alert("Invalid Registeration");
+            console.log("Invalid Registeraton");
+        } else {
+            window.alert("Registeration succesful");
+            console.log("Registeraton succesful");
+
+            history.push("/login");
+        }
+    }
+
     return (
         <>
             <div className="x">
@@ -24,10 +52,10 @@ export const Signup = () => {
                         <div className="signup-content p-lg-5" style={{ display: "flex" }}>
                             <div className="signup-form col-6">
                                 <center><h2 className="form-title mb-2">Sign up</h2></center>
-                                <form className="register-form p-4" id="reguster-form">
+                                <form method="POST" className="register-form p-4" id="reguster-form">
                                     <div className="form-group">
                                         <label htmlFor="name">
-                                            <i class="zmdi zmdi-account material-icons-name"></i>                                    </label>
+                                            <i className="zmdi zmdi-account material-icons-name"></i>                                    </label>
                                         <input type="text" name="name" id="name" autoComplete="off"
                                             value={user.name}
                                             onChange={handleInputs}
@@ -79,7 +107,7 @@ export const Signup = () => {
                                             placeholder="Confirm Your Password"></input>
                                     </div>
                                     <div className="form-group form-button mt-5" >
-                                        <input type="submit" name="signup" id="signup" className="form-submit" value="Register"></input>
+                                        <input type="submit" name="signup" id="signup" className="form-submit" value="Register" onClick={postData}></input>
                                     </div>
                                 </form>
                             </div>

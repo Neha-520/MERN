@@ -16,16 +16,16 @@ export const Navbar = () => {
                             <li className="nav-item active">
                                 <NavLink className="nav-link" to="/">Home <span className="sr-only">(current)</span></NavLink>
                             </li>
-                            <li class="nav-item ">
+                            <li className="nav-item ">
                                 <NavLink className="nav-link" to="/about">About <span className="sr-only">(current)</span></NavLink>
                             </li>
-                            <li class="nav-item">
+                            <li className="nav-item">
                                 <NavLink className="nav-link" to="/contact">Contact</NavLink>
                             </li>
-                            <li class="nav-item">
+                            <li className="nav-item">
                                 <NavLink className="nav-link" to="/login">Login</NavLink>
                             </li>
-                            <li class="nav-item">
+                            <li className="nav-item">
                                 <NavLink className="nav-link" to="/signup">Signup</NavLink>
                             </li>
                         </ul>
