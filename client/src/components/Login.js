@@ -1,7 +1,35 @@
-import React from 'react'
-import { NavLink } from 'react-router-dom'
+import React, { useState } from 'react'
+import { NavLink, useHistory } from 'react-router-dom'
 
 export const Login = () => {
+    const history = useHistory();
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+
+    const loginUser = async (e) => {
+        e.preventDefault();
+
+        const res = await fetch('/signin', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                email, password
+            })
+        });
+
+        const data = res.json();
+        if (!data || res.status === 400) {
+            window.alert("Invalid Credentials");
+
+        } else {
+            window.alert("login successfully");
+            history.push("/");
+        }
+
+    }
+
     return (
         <>
             <div className="x">
@@ -16,24 +44,24 @@ export const Login = () => {
                             </div>
                             <div className="signin-form col-5 " >
                                 <h2 className="form-title mt-1">Sign In</h2>
-                                <form className="register-form mt-2" id="reguster-form">
+                                <form className="register-form mt-2" method="POST" id="reguster-form">
 
                                     <div className="form-group mt-5">
                                         <label htmlFor="email">
                                             <i className="zmdi zmdi-email material-icons-name"></i>
                                         </label>
-                                        <input type="email" name="email" id="email" autoComplete="off" placeholder="Your Email"></input>
+                                        <input type="email" name="email" id="email" autoComplete="off" onChange={() => setEmail(e.target.value)} placeholder="Your Email"></input>
                                     </div>
 
                                     <div className="form-group">
                                         <label htmlFor="password">
                                             <i className="zmdi zmdi-lock material-icons-name"></i>
                                         </label>
-                                        <input type="password" name="password" id="password" autoComplete="off" placeholder="Your Password"></input>
+                                        <input type="password" name="password" id="password" autoComplete="off" onChange={() => setPassword(e.target.value)} placeholder="Your Password"></input>
                                     </div>
 
                                     <div className="form-group form-button mt-4">
-                                        <input type="submit" name="signin" id="signin" className="form-submit" value="Log In"></input>
+                                        <input type="submit" name="signin" id="signin" className="form-submit" value="Log In" onClick={loginUser}></input>
                                     </div>
                                 </form>
                             </div>
