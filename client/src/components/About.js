@@ -1,9 +1,17 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 export const About = () => {
+
+    const callAboutPage = async () => {
+
+    }
+
+    useEffect(() => {
+        callAboutPage();
+    }, []);
+
     return (
         <>
-
             <div className="container emp-profile p-5" style={{ marginTop: "40px", boxShadow: "0 6px 10px -4px rgb(0 0 0 / 0.2)", backgroundColor: "#ffffff" }}>
                 <form method="">
                     <div className="row">
