@@ -1,10 +1,9 @@
 const jwt = require("jsonwebtoken");
 
-const express = require('express');
 
 const User = require("../model/userSchema");
 
-const Authenticate = async (req, res, next) => {
+const authenticate = async (req, res, next) => {
     try {
 
         const token = req.cookie.jwt;
@@ -26,4 +25,4 @@ const Authenticate = async (req, res, next) => {
         console.log(err);
     }
 }
-module.exports = Authenticate;
+module.exports = authenticate;

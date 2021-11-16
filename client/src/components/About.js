@@ -1,8 +1,10 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useHistory } from "react-router-dom"
 export const About = () => {
 
     const history = useHistory();
+
+    const [userData, setUserData] = useState();
 
     const callAboutPage = async () => {
         try {
@@ -18,6 +20,7 @@ export const About = () => {
 
             const data = await res.json();
             console.log(data);
+            setUserData(data);
 
             if (!res.status === 200) {
                 const error = new Error(res.error);
@@ -47,7 +50,7 @@ export const About = () => {
                         </div>
                         <div className="col-md-6">
                             <div className="profile-head">
-                                <h5>Neha Garg</h5>
+                                <h5>{userData.name}</h5>
                                 <h6 style={{ color: "blue" }}>Web Developer</h6>
                                 <p className="profile-rating mt-3 mb-5 " style={{ color: "gray" }}>
                                     RANKINGS : <span>1/10</span>
