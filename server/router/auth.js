@@ -54,7 +54,7 @@ router.post('/signin', async (req, res) => {
             const token = await userLogin.generateAuthToken();
             console.log(token);
 
-            res.cookie("jwtoken", token, {
+            res.cookie("jwt", token, {
                 expires: new Date(Date.now() + 25892000000), //expire after 30 days
                 // httpOnly: true,
             })
@@ -76,7 +76,7 @@ router.post('/signin', async (req, res) => {
 //about us
 router.get('/about', authenticate, (req, res) => {
     console.log("Hello ABout");
-    res.send(`hello from about us from server`);
+    res.send(req.rootUser);
 })
 
 module.exports = router;
