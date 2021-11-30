@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import { useHistory } from "react-router-dom"
 export const About = () => {
 
     const history = useHistory();
 
-    const [userData, setUserData] = useState();
+    // const [userData, setUserData] = useState();
 
     const callAboutPage = async () => {
         try {
-            const res = await fetch('./about', {
+            const res = await fetch('/about', {
                 method: "GET",
                 headers: {
                     Accept: "application/json",
@@ -20,7 +20,7 @@ export const About = () => {
 
             const data = await res.json();
             console.log(data);
-            setUserData(data);
+            // setUserData(data);
 
             if (!res.status === 200) {
                 const error = new Error(res.error);
@@ -34,7 +34,7 @@ export const About = () => {
 
     useEffect(() => {
         callAboutPage();
-        // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line 
     }, []);
 
     return (
@@ -50,7 +50,7 @@ export const About = () => {
                         </div>
                         <div className="col-md-6">
                             <div className="profile-head">
-                                <h5>{userData.name}</h5>
+                                {/* <h5>{userData.name}</h5> */}
                                 <h6 style={{ color: "blue" }}>Web Developer</h6>
                                 <p className="profile-rating mt-3 mb-5 " style={{ color: "gray" }}>
                                     RANKINGS : <span>1/10</span>

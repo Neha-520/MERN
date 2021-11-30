@@ -3,10 +3,10 @@ const jwt = require("jsonwebtoken");
 
 const User = require("../model/userSchema");
 
-const authenticate = async (req, res, next) => {
+const Authenticate = async (req, res, next) => {
     try {
 
-        const token = req.cookie.jwt;
+        const token = req.cookie.jwtoken;
         const verifyToken = jwt.verify(token, process.env.SECRET_KEY)
 
         const rootUser = await User.findOne({ _id: verifyToken._id, "tokens.token": token });
@@ -16,7 +16,7 @@ const authenticate = async (req, res, next) => {
 
         req.token = token;
         req.rootUser = rootUser;
-        req.userId = rootUser._id;
+        req.userID = rootUser._id;
 
         next();
 
@@ -25,4 +25,4 @@ const authenticate = async (req, res, next) => {
         console.log(err);
     }
 }
-module.exports = authenticate;
+module.exports = Authenticate;
