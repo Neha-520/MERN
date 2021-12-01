@@ -2,6 +2,9 @@ const dotenv = require("dotenv");
 const mongoose = require('mongoose');
 const express = require('express');
 const app = express();
+var cookieParser = require('cookie-parser')
+
+app.use(cookieParser());
 
 dotenv.config({ path: "./config.env" });
 //hv to write only in app.js
