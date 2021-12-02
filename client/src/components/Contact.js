@@ -114,7 +114,7 @@ export const Contact = () => {
                             <div className="contact_form_container py-5">
                                 <div className="contact_form_title">
                                     <h3 style={{ fontWeight: "600", fontSize: "26px" }}>Get In Touch</h3></div>
-                                <form id="contact_form" className="mt-4">
+                                <form method="POST" id="contact_form" className="mt-4">
                                     <div className="contact_form_name d-flex justify-content-between align-items-between">
                                         <input type="text" id="contact_form_name" name="name" style={{ width: "30%" }} className="contact_form_name input_field" onChange={handleInputs} value={userData.name} placeholder="Your Name" required="true">
                                         </input>

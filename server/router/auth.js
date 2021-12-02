@@ -85,7 +85,8 @@ router.get('/getdata', authenticate, (req, res) => {
     res.send(req.rootUser);
 })
 
-router.get('/contact', authenticate, async (req, res) => {
+//contact us page
+router.post('/contact', authenticate, async (req, res) => {
     try {
         const { name, email, phone, message } = req.body;
 
@@ -97,7 +98,7 @@ router.get('/contact', authenticate, async (req, res) => {
         const userContact = await User.findOne({ _id: req.userID })
 
         if (userContact) {
-            const userMessage = await userContact.addMessage(name, email, phone.message);
+            const userMessage = await userContact.addMessage(name, email, phone, message);
 
             await userContact.save();
             res.status(201).json({ message: "user Contact succesfully" });
@@ -106,6 +107,15 @@ router.get('/contact', authenticate, async (req, res) => {
     } catch (error) {
         console.log(error);
     }
+})
+
+
+router.get('/logout', (req, res) => {
+    console.log("Hello from logout");
+    res.clearCookie('jwtoken', {
+        path: '/'
+    });
+    res.status(200).send("User logout");
 })
 
 module.exports = router;
