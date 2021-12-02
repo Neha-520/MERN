@@ -5,6 +5,7 @@ import { UserContext } from '../App';
 export const Logout = () => {
 
     const { state, dispatch } = useContext(UserContext);
+    console.log(state);
 
     const history = useHistory();
 
