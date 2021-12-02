@@ -110,6 +110,7 @@ background-color: #fff;
    min-width: fit-content;
 /* overflow-y: auto; */
 }
+
 input{
   border: none;
   background: transparent;
@@ -126,17 +127,20 @@ background-color: #fff;
  box-Shadow: 0 6px 10px -4px rgb(0 0 0 / 0.2);
 /* overflow: hidden; */
 padding: 1rem 5rem 1rem 5rem;
-   width: fit-content;
-     height: fit-content;
+border-radius: 1.5rem;
+   width:max-content;
+     height: max-content;
 }
+
 
 .form-title{
   font-weight: 700;
   font-size: 30px;
 }
 .input_field {
+  
   padding: 1.3rem;
-  margin-right: 1rem;
+  margin-right: 0.2rem;
   border: none;
     border: 0.1rem solid rgb(231, 234, 238);
 
@@ -145,6 +149,7 @@ padding: 1rem 5rem 1rem 5rem;
 color: rgb(199, 196, 196);
 }
 textarea{
+  padding: 1rem;
   border: none;
      border: 0.1rem solid rgb(231, 234, 238);
 }
@@ -152,7 +157,7 @@ textarea::-webkit-input-placeholder {
 color: rgb(199, 196, 196) !important;
 }
 .contact_info_item{
- background-color: #ffffff;
+background-color: #f8f9fa; 
   border: 0.1rem solid rgb(231, 234, 238);
   width: 400px;
   padding: 1rem;

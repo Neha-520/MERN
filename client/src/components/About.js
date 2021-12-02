@@ -1,10 +1,11 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useHistory } from "react-router-dom"
+
 export const About = () => {
 
     const history = useHistory();
 
-    // const [userData, setUserData] = useState();
+    const [userData, setUserData] = useState("");
 
     const callAboutPage = async () => {
         try {
@@ -20,7 +21,7 @@ export const About = () => {
 
             const data = await res.json();
             console.log(data);
-            // setUserData(data);
+            setUserData(data);
 
             if (!res.status === 200) {
                 const error = new Error(res.error);
@@ -45,13 +46,13 @@ export const About = () => {
                         <div className="col-md-4">
                             <div children="profile-img">
                                 {/* src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWMQkj6_gQi5y_VcfXdbuGyhd4XmlVHuAjgw&usqp=CAU" */}
-                                <img src="https://i.pinimg.com/736x/89/90/48/899048ab0cc455154006fdb9676964b3.jpg" style={{ width: "190px", height: "200px", objectFit: "contain" }} alt="neha" />
+                                <img src={userData.name === "neha" ? '/neha1.jpg' : "https://i.pinimg.com/736x/89/90/48/899048ab0cc455154006fdb9676964b3.jpg"} style={{ width: "190px", height: "200px", objectFit: "cover" }} alt="neha" />
                             </div>
                         </div>
                         <div className="col-md-6">
                             <div className="profile-head">
-                                {/* <h5>{userData.name}</h5> */}
-                                <h6 style={{ color: "blue" }}>Web Developer</h6>
+                                <h5>{userData.name}</h5>
+                                <h6 style={{ color: "blue" }}>{userData.work}</h6>
                                 <p className="profile-rating mt-3 mb-5 " style={{ color: "gray" }}>
                                     RANKINGS : <span>1/10</span>
                                 </p>
@@ -94,7 +95,7 @@ export const About = () => {
                                             <label >User ID</label>
                                         </div>
                                         <div className="col-md-6">
-                                            <p>1910923487</p>
+                                            <p>{userData._id}</p>
                                         </div>
                                     </div>
                                     <div className="row mt-3">
@@ -102,7 +103,7 @@ export const About = () => {
                                             <label >Name</label>
                                         </div>
                                         <div className="col-md-6">
-                                            <p>Neha Garg</p>
+                                            <p>{userData.name}</p>
                                         </div>
                                     </div>
                                     <div className="row mt-3">
@@ -110,7 +111,7 @@ export const About = () => {
                                             <label >Email</label>
                                         </div>
                                         <div className="col-md-6">
-                                            <p>neha17@gmail.com</p>
+                                            <p>{userData.email}</p>
                                         </div>
                                     </div>
                                     <div className="row mt-3">
@@ -118,7 +119,7 @@ export const About = () => {
                                             <label >Phone</label>
                                         </div>
                                         <div className="col-md-6">
-                                            <p>7888345434</p>
+                                            <p>{userData.phone}</p>
                                         </div>
                                     </div>
                                     <div className="row mt-3">
@@ -126,7 +127,7 @@ export const About = () => {
                                             <label >Profession</label>
                                         </div>
                                         <div className="col-md-6">
-                                            <p>Web Developer</p>
+                                            <p>{userData.work}</p>
                                         </div>
                                     </div>
                                 </div>

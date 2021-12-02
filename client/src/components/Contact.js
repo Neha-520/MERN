@@ -51,24 +51,24 @@ export const Contact = () => {
             <div className="contact_form" >
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-10 offset-lg-1">
+                        <div className="col-lg-6 offset-lg-1">
                             <div className="contact_form_container py-5">
                                 <div className="contact_form_title">
                                     <h3>Get In Touch</h3></div>
                                 <form id="contact_form" className="mt-4">
                                     <div className="contact_form_name d-flex justify-content-between align-items-between">
-                                        <input type="text" id="contact_form_name" className="contact_form_name input_field" placeholder="Your Name" required="true">
+                                        <input type="text" id="contact_form_name" style={{ width: "30%" }} className="contact_form_name input_field" placeholder="Your Name" required="true">
                                         </input>
 
-                                        <input type="email" id="contact_form_email" className="contact_form_email input_field" placeholder="Your Email" required="true">
+                                        <input type="email" id="contact_form_email" style={{ width: "30%" }} className="contact_form_email input_field" placeholder="Your Email" required="true">
                                         </input>
 
-                                        <input type="number" id="contact_form_phone" className="contact_form_phone input_field" placeholder="Your Phone Number" required="true">
+                                        <input type="number" id="contact_form_phone" style={{ width: "30%" }} className="contact_form_phone input_field" placeholder="Your Phone Number" required="true">
                                         </input>
                                     </div>
 
                                     <div className="contact_form_text mt-5">
-                                        <textarea className="text_field contact_form_message p-3" placeholder="Message" cols="100" rows="5"></textarea>
+                                        <textarea className="text_field contact_form_message " placeholder="Message" cols="85" rows="5"></textarea>
                                     </div>
                                     <div className="contact_form_button mt-4">
                                         <button type="submit" className="btn btn-primary ">
