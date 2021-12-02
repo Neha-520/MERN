@@ -1,6 +1,65 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 
 export const Contact = () => {
+    const [userData, setUserData] = useState({
+        name: "", email: "", phone: "", message: ""
+    });
+
+    const callContactPage = async () => {
+        try {
+            const res = await fetch('/getdata', {
+                method: "GET",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+            });
+
+            const data = await res.json();
+            console.log(data);
+            setUserData({ ...userData, name: data.name, email: data.email, phone: data.phone })
+
+            if (!res.status === 200) {
+                const error = new Error(res.error);
+                throw error;
+            }
+        } catch (err) {
+            console.log(err);
+        }
+    }
+
+    useEffect(() => {
+        callContactPage();
+        // eslint-disable-next-line 
+    }, []);
+
+    const handleInputs = (e) => {
+        const name = e.target.name;
+        const value = e.target.value;
+        setUserData({ ...userData, [name]: value })
+    }
+
+    //send data to backend
+    const contactForm = async (e) => {
+        e.preventDefault();
+        const { name, email, phone, message } = userData;
+        const res = await fetch('/contact', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                name, email, phone, message
+            })
+        });
+        const data = await res.json();
+        if (!data) {
+            console.log("message not sent");
+        } else {
+            alert("Message sent successfully")
+            setUserData({ ...userData, message: "" })
+        }
+    }
+
     return (
         <>
             <div className="contact_info">
@@ -51,27 +110,27 @@ export const Contact = () => {
             <div className="contact_form" >
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-6 offset-lg-1">
+                        <div className="col-lg-5 offset-lg-1">
                             <div className="contact_form_container py-5">
                                 <div className="contact_form_title">
-                                    <h3>Get In Touch</h3></div>
+                                    <h3 style={{ fontWeight: "600", fontSize: "26px" }}>Get In Touch</h3></div>
                                 <form id="contact_form" className="mt-4">
                                     <div className="contact_form_name d-flex justify-content-between align-items-between">
-                                        <input type="text" id="contact_form_name" style={{ width: "30%" }} className="contact_form_name input_field" placeholder="Your Name" required="true">
+                                        <input type="text" id="contact_form_name" name="name" style={{ width: "30%" }} className="contact_form_name input_field" onChange={handleInputs} value={userData.name} placeholder="Your Name" required="true">
                                         </input>
 
-                                        <input type="email" id="contact_form_email" style={{ width: "30%" }} className="contact_form_email input_field" placeholder="Your Email" required="true">
+                                        <input type="email" id="contact_form_email" name="email" style={{ width: "30%" }} className="contact_form_email input_field" onChange={handleInputs} value={userData.email} placeholder="Your Email" required="true">
                                         </input>
 
-                                        <input type="number" id="contact_form_phone" style={{ width: "30%" }} className="contact_form_phone input_field" placeholder="Your Phone Number" required="true">
+                                        <input type="number" id="contact_form_phone" name="phone" style={{ width: "30%" }} className="contact_form_phone input_field" onChange={handleInputs} value={userData.phone} placeholder="Your Phone Number" required="true">
                                         </input>
                                     </div>
 
-                                    <div className="contact_form_text mt-5">
-                                        <textarea className="text_field contact_form_message " placeholder="Message" cols="85" rows="5"></textarea>
+                                    <div className="contact_form_text mt-4">
+                                        <textarea className="text_field contact_form_message " name="message" onChange={handleInputs} value={userData.message} style={{ color: "#17a2b8" }} placeholder="Message" cols="70" rows="5"></textarea>
                                     </div>
-                                    <div className="contact_form_button mt-4">
-                                        <button type="submit" className="btn btn-primary ">
+                                    <div className="contact_form_button mt-3">
+                                        <button type="submit" className="btn btn-primary " onClick={contactForm}>
                                             Send Message
                                         </button>
                                     </div>

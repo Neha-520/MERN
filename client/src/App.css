@@ -127,11 +127,15 @@ background-color: #fff;
  box-Shadow: 0 6px 10px -4px rgb(0 0 0 / 0.2);
 /* overflow: hidden; */
 padding: 1rem 5rem 1rem 5rem;
-border-radius: 1.5rem;
-   width:max-content;
-     height: max-content;
+border-radius: 0.9rem;
+   width:fit-content;
+     height: fit-content;
 }
 
+.input_field, select, textarea {
+font-size: 100%;
+font-weight: 550;
+}
 
 .form-title{
   font-weight: 700;

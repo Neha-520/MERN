@@ -35,9 +35,9 @@ const PORT = process.env.PORT;
 // })
 
 
-app.get('/contact', (req, res) => {
-    res.send("hello from contact");
-})
+// app.get('/contact', (req, res) => {
+//     res.send("hello from contact");
+// })
 app.get('/signin', (req, res) => {
     res.send("hello from login");
 })
