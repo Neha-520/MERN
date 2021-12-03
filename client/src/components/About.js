@@ -70,21 +70,21 @@ export const About = () => {
                             </div>
                         </div>
 
-                        <div className="col-md-2">
+                        {/* <div className="col-md-2">
                             <input type="submit" className="profile-edit-btn" name="btnAddMore" value="Edit Profile" />
-                        </div>
+                        </div> */}
                     </div>
 
                     <div className="row">
                         <div className="col-md-4">
                             <div className="profile-work" style={{ marginTop: "20px" }}>
                                 <p style={{ color: "gray" }}>WORK LINK</p>
-                                <a href="https://www.linkedin.com/in/neha-garg-506700200/" rel="noreferrer" target="_blank">Linked In</a><br />
-                                <a href="https://www.instagram.com/neha._.garg._/" rel="noreferrer" target="_blank">Instagram</a><br />
-                                <a href="https://mtouch.facebook.com/profile.php" rel="noreferrer" target="_blank"> Facebook</a><br />
-                                <a href="https://twitter.com/home" rel="noreferrer" target="_blank"> Twitter</a><br />
-                                <a href="https://github.com/Neha-520" rel="noreferrer" target="_blank"> Web Developer</a><br />
-                                <a href="https://github.com/Neha-520" rel="noreferrer" target="_blank">Github</a><br />
+                                <div className="pw ">
+                                    <a href="https://www.linkedin.com/in/" rel="noreferrer" target="_blank">Linked In </a><br />
+                                    <a href="https://www.instagram.com/" rel="noreferrer" target="_blank"> Instagram </a><br />
+                                    <a href="https://mtouch.facebook.com/" rel="noreferrer" target="_blank"> Facebook </a><br />
+                                    <a href="https://twitter.com/home" rel="noreferrer" target="_blank"> Twitter </a><br />
+                                </div>
                             </div>
                         </div>
                         <div className="col-md-8 pl-5 about-info">

@@ -65,8 +65,8 @@ export const Contact = () => {
             <div className="contact_info">
                 <div className="container-fluid">
                     <div className="row mt-5">
-                        <div className="col-lg-10 offset-lg-1 d-flex justify-content-between">
-                            <div className="contact_info_item d-flex  align-items-center">
+                        <div className="col-lg-10 col-md-10  offset-lg-1 d-flex justify-content-between  z">
+                            <div className="contact_info_item d-flex  align-items-center ">
                                 <img src="https://img.icons8.com/office/24/000000/iphone.png" alt="phone"></img>
                                 <div className="contact_info_content " style={{ marginLeft: "1rem" }}>
                                     <div className="contact_info_title">
@@ -109,25 +109,25 @@ export const Contact = () => {
 
             <div className="contact_form" >
                 <div className="container">
-                    <div className="row">
-                        <div className="col-lg-5 offset-lg-1">
-                            <div className="contact_form_container py-5">
+                    <div className="row mt-5 ">
+                        <div className=" col-lg-10 col-md-10 col-sm-10 offset-lg-1 d-flex justify-content-between align-self-center">
+                            <div className="contact_form_container py-5 ">
                                 <div className="contact_form_title">
                                     <h3 style={{ fontWeight: "600", fontSize: "26px" }}>Get In Touch</h3></div>
                                 <form method="POST" id="contact_form" className="mt-4">
-                                    <div className="contact_form_name d-flex justify-content-between align-items-between">
-                                        <input type="text" id="contact_form_name" name="name" style={{ width: "30%" }} className="contact_form_name input_field" onChange={handleInputs} value={userData.name} placeholder="Your Name" required="true">
+                                    <div className="contact_form_name d-flex  ">
+                                        <input type="text" id="contact_form_name" name="name" className="contact_form_name input_field col-4" onChange={handleInputs} value={userData.name} placeholder="Your Name" required="true">
                                         </input>
 
-                                        <input type="email" id="contact_form_email" name="email" style={{ width: "30%" }} className="contact_form_email input_field" onChange={handleInputs} value={userData.email} placeholder="Your Email" required="true">
+                                        <input type="email" id="contact_form_email" name="email" className="contact_form_email input_field col-4" onChange={handleInputs} value={userData.email} placeholder="Your Email" required="true">
                                         </input>
 
-                                        <input type="number" id="contact_form_phone" name="phone" style={{ width: "30%" }} className="contact_form_phone input_field" onChange={handleInputs} value={userData.phone} placeholder="Your Phone Number" required="true">
+                                        <input type="number" id="contact_form_phone" name="phone" className="contact_form_phone input_field col-4" onChange={handleInputs} value={userData.phone} placeholder="Your Phone Number" required="true">
                                         </input>
                                     </div>
 
                                     <div className="contact_form_text mt-4">
-                                        <textarea className="text_field contact_form_message " name="message" onChange={handleInputs} value={userData.message} style={{ color: "#17a2b8" }} placeholder="Message" cols="70" rows="5"></textarea>
+                                        <textarea className="text_field contact_form_message col-lg-12 col-md-12" name="message" onChange={handleInputs} value={userData.message} style={{ color: "#17a2b8" }} placeholder="Message"></textarea>
                                     </div>
                                     <div className="contact_form_button mt-3">
                                         <button type="submit" className="btn btn-primary " onClick={contactForm}>

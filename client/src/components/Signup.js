@@ -47,10 +47,10 @@ export const Signup = () => {
     return (
         <>
             <div className="x">
-                <section className="signup" style={{ width: "50%", height: "max-content" }}>
-                    <div className="container mt-4" style={{ height: "max-content" }}>
+                <section className="signup" >
+                    <div className="container mt-4" >
                         <div className="signup-content p-lg-4" style={{ display: "flex" }}>
-                            <div className="signup-form col-6" style={{ flex: "6" }}>
+                            <div className="signup-form col-6" >
                                 <center><h2 className="form-title mb-2">Sign up</h2></center>
                                 <form method="POST" className="register-form p-4" id="reguster-form">
                                     <div className="form-group">
@@ -111,11 +111,11 @@ export const Signup = () => {
                                     </div>
                                 </form>
                             </div>
-                            <div className="signup-image mt-2  col-6" style={{ flex: "6" }} >
+                            <div className="signup-image mt-2  col-6"  >
                                 <figure >
                                     <img src="/register.jpg" alt="registration pic" style={{ width: "180px", height: "320px", objectFit: "cover" }}></img>
                                 </figure>
-                                <NavLink to="/login" className="signup-image-link">I am already registered</NavLink>
+                                <center><NavLink to="/login" className="signup-image-link">I am already registered</NavLink></center>
                             </div>
                         </div>
                     </div>

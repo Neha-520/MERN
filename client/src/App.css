@@ -63,18 +63,17 @@ a{
      color: #fff;
      font-weight: 400;
 } 
-.profile-edit-btn {
+/* .profile-edit-btn {
      font-family:"Maven Pro",sans-serif ;
      font-size: 14px;
      text-decoration: none;
      background: rgb(226, 224, 224);
-     /* display: inline-block; */
     opacity: 0.7;
      border: 2px solid transparent;
      border-radius: 50px;
      color: rgb(114, 113, 113);
      font-weight: 700;
-}
+} */
 .wh{
     position: relative;
     /* top:0; */
@@ -94,13 +93,13 @@ a{
   /* text-align: center;   */
 }
 .signup{
-  width:35%;
+   /* width: "50%", height: "max-content"  */
+  width:50%;
   min-width: fit-content;
-height: 80vh;
+ height: "max-content";
 background-color: #fff;
  box-Shadow: 0 6px 10px -4px rgb(0 0 0 / 0.2);
-/* overflow-y: auto; */
-/* overflow-x: scroll; */
+
 }
 .sign-in{
   background-color: #fff;
@@ -111,6 +110,18 @@ background-color: #fff;
 /* overflow-y: auto; */
 }
 
+.signup-form{
+flex: 6;
+}
+.signup-image{
+  flex: 6;
+}
+.signin-form{
+flex: 5;
+}
+.signin-image{
+  flex: 7;
+}
 input{
   border: none;
   background: transparent;
@@ -121,15 +132,19 @@ input{
   outline: none;
 }
 .contact_form_container {
-margin-top: 50px;
+/* margin-top: 50px; */
 /* height: 60vh; */
 background-color: #fff;
  box-Shadow: 0 6px 10px -4px rgb(0 0 0 / 0.2);
 /* overflow: hidden; */
-padding: 1rem 5rem 1rem 5rem;
+padding: 1rem 4rem 1rem 4rem;
 border-radius: 0.9rem;
-   width:fit-content;
-     height: fit-content;
+   /* width:min-content;
+     height: min-content; */
+}
+.i{
+  width: "400px";height: "300px";
+   object-fit: "cover" 
 }
 
 .input_field, select, textarea {
@@ -263,4 +278,54 @@ z-index: -1;
   .notfound h2{
     font-size: 26px;
   }
+}
+@media only screen and (max-width:767px) {
+
+.signin-form{
+  margin-left: 1rem;
+}
+.i{
+  width: "380px";height: "300px";
+   object-fit: "cover" 
+}
+.signin-content{
+  width: fit-content;
+}
+.signip-form{
+flex: 9;
+}
+.signip-image{
+  flex: 3;
+}
+}
+.pw{
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 760px){
+.pw{
+  flex-direction: row;
+}
+.pw a{
+  margin-right: 1.2rem;
+}
+}
+
+@media screen and (max-width: 480px){
+/* .signup{
+
+margin-left: auto;
+margin-right: auto;
+} */
+.signup-form{
+flex: 9;
+}
+.signup-image{
+  flex: 3;
+}
+
+input{
+  width: 100%;
+}
 }
